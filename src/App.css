@@ -1,0 +1,47 @@
+/* App-specific styles */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(0, 112, 160, 0.2);
+  color: #1f1f1f;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #0070a0;
+  outline-offset: 2px;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #f7f9fa;
+}
+
+/* Prevent text selection on interactive elements */
+button,
+a {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+textarea {
+  transition: all 0.3s ease;
+}
+
+/* Custom cursor for interactive elements */
+@media (pointer: fine) {
+  button,
+  a,
+  [role="button"] {
+    cursor: pointer;
+  }
+}
