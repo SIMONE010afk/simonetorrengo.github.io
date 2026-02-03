@@ -22,7 +22,7 @@ const skills = [
   { name: 'NLP', icon: MessageSquare, level: 90, category: 'AI' },
   { name: 'Computer Vision', icon: Eye, level: 80, category: 'AI' },
   { name: 'Power BI', icon: BarChart3, level: 90, category: 'Analytics' },
-  { name: 'Apache Airflow', icon: Workflow, level: 90, category: 'Orchestration' },
+  { name: 'Apache Airflow', icon: Workflow, level: 80, category: 'Orchestration' },
   { name: 'API Integration', icon: Layers, level: 70, category: 'Dev' },
   { name: 'Cloud Deployment', icon: Cloud, level: 80, category: 'DevOps' },
   { name: 'PostgreSQL', icon: Database, level: 70, category: 'Database' },
