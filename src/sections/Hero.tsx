@@ -69,7 +69,7 @@ export default function Hero() {
       id="home"
       className="min-h-screen w-full flex items-center relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #f7f9fa 0%, #e6f7ff 50%, #cce5f3 100%)',
+        background: 'linear-gradient(135deg, #f9fbfc 0%, #eefbff 50%, #d8ecf8 100%)',
       }}
     >
       {/* decorative background */}
@@ -138,7 +138,6 @@ export default function Hero() {
                   alt="AI Agent Developer"
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0070a0]/20 to-transparent" />
               </div>
 
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl p-4 animate-float">

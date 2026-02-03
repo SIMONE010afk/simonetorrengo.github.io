@@ -64,17 +64,20 @@ export default function Skills() {
     resize();
     window.addEventListener('resize', resize);
 
-    const nodes: { x: number; y: number; vx: number; vy: number }[] = [];
-    for (let i = 0; i < 25; i++)
+    const nodes: { x: number; y: number; vx: number; vy: number; size: number; phase: number }[] = [];
+    for (let i = 1000; i < 1500; i++)
       nodes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - 0.5) * 1.0,
+        vy: (Math.random() - 0.5) * 1.0,
+        size: 3 + Math.random() * 3,
+        phase: Math.random() * Math.PI * 2,
       });
 
     let id: number;
     const draw = () => {
+      const t = performance.now() * 0.003;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (const node of nodes) {
         node.x += node.vx;
@@ -82,9 +85,10 @@ export default function Skills() {
         if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
         if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
 
+        const radius = node.size * (0.8 + 0.2 * Math.sin(t + node.phase));
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 112, 160, 0.3)';
+        ctx.arc(node.x, node.y, radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0, 96, 138, 0.45)';
         ctx.fill();
       }
       for (let i = 0; i < nodes.length; i++) {
@@ -92,11 +96,11 @@ export default function Skills() {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const d = Math.sqrt(dx * dx + dy * dy);
-          if (d < 150) {
+          if (d < 170) {
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(0, 112, 160, ${0.15 * (1 - d / 150)})`;
+            ctx.strokeStyle = `rgba(0, 96, 138, ${0.22 * (1 - d / 170)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -144,7 +148,15 @@ export default function Skills() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, [filteredSkills]);
+  }, [activeCategory]);
+
+  // Recalculate all section trigger positions after grid height changes.
+  useEffect(() => {
+    const rafId = requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+    return () => cancelAnimationFrame(rafId);
+  }, [activeCategory]);
 
   return (
     <section ref={sectionRef} id="skills" className="py-24 bg-white relative overflow-hidden">

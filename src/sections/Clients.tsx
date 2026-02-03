@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const clients = [
 
   { name: 'ITS Academy ICT Piemonte', color: '#FF0000' },
-  { name: 'Microsoft', color: '#00A4EF' },
+  { name: 'BluMonday', color: '#00A4EF' },
   { name: 'OpenAI', color: '#10A37F' },
   { name: 'Anthropic', color: '#D97757' },
   { name: 'Intesa Sanpaolo Innovation Centre', color: '#FF6600'},
