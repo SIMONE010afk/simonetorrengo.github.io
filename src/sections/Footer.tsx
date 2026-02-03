@@ -17,7 +17,7 @@ const footerLinks = {
     { label: 'Blog', href: '#' },
     { label: 'Case Studies', href: '#' },
     { label: 'Documentazione', href: '#' },
-    { label: 'GitHub', href: '#' },
+    { label: 'GitHub', href: 'https://github.com/SIMONE010afk' },
   ],
 };
 
@@ -31,7 +31,7 @@ export default function Footer() {
       {/* Main footer content */}
       <div className="section-padding py-16">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Brand column */}
             <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
               <div className="flex items-center gap-3 mb-4">
@@ -111,26 +111,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Newsletter */}
-            <div className="col-span-2 md:col-span-2 lg:col-span-1">
-              <h4 className="font-semibold mb-4 text-white">Newsletter</h4>
-              <p className="text-gray-400 text-sm mb-4">
-                Iscriviti per ricevere aggiornamenti sui miei progetti.
-              </p>
-              <form className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="La tua email"
-                  className="flex-1 px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#0070a0] transition-colors"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2 rounded-lg bg-[#0070a0] hover:bg-[#2c90c9] text-white text-sm font-medium transition-colors"
-                >
-                  Iscriviti
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </div>
@@ -140,7 +120,7 @@ export default function Footer() {
         <div className="section-padding py-6">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-gray-400 text-sm text-center sm:text-left">
-              <p>© {new Date().getFullYear()} AI Agent Developer. Tutti i diritti riservati.</p>
+              <p>© {new Date().getFullYear()} Simone Torrengo. Tutti i diritti riservati.</p>
               <p className="text-xs mt-1 text-gray-500">
                 Questo sito è protetto da copyright. È vietata la riproduzione non autorizzata.
               </p>

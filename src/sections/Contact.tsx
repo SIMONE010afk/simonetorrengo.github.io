@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Send, Mail, MapPin, Phone, Linkedin, Github, CheckCircle } from 'lucide-react';
+import { Send, Mail, MapPin, Linkedin, Github, CheckCircle } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,7 +69,6 @@ export default function Contact() {
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'simone.torrengo@gmail.com', href: 'mailto:simone.torrengo@gmail.com' },
-    { icon: Phone, label: 'Telefono', value: '+39 123 456 7890', href: 'tel:+391234567890' },
     { icon: MapPin, label: 'Location', value: 'Torino, Italia', href: '#' },
   ];
 

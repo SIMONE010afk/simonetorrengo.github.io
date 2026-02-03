@@ -6,18 +6,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const clients = [
 
-  { name: 'YouTube', color: '#FF0000' },
+  { name: 'ITS Academy ICT Piemonte', color: '#FF0000' },
   { name: 'Microsoft', color: '#00A4EF' },
-  //{ name: 'Slack', color: '#4A154B' },
   { name: 'OpenAI', color: '#10A37F' },
   { name: 'Anthropic', color: '#D97757' },
-  //{ name: 'Hugging Face', color: '#FFD21E' },
-  {
-  name: 'Intesa Sanpaolo Innovation Centre',
-  color: '#FF6600',        // arancione ISP ufficiale
-  // se vuoi aggiungere l’icona/logo:
-  icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Intesa_Sanpaolo_logo.svg/512px-Intesa_Sanpaolo_logo.svg.png'
-}
+  { name: 'Intesa Sanpaolo Innovation Centre', color: '#FF6600'},
 ];
 
 export default function Clients() {

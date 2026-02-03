@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Github, Bot, Brain, MessageSquare } from 'lucide-react';
+import { Github, Bot, Brain, MessageSquare } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +13,6 @@ const projects = [
     image: '/project-1.jpg',
     tags: ['Notebook', 'Google Colab', 'NLP', 'TensorFlow'],
     icon: Bot,
-    link: '#',
     github: 'https://github.com/SIMONE010afk/Facebook-Hateful-Memes'
   },
   {
@@ -23,7 +22,6 @@ const projects = [
     image: '/project-2.jpg',
     tags: ['TensorFlow', 'PyTorch', 'Redis', 'AWS'],
     icon: Brain,
-    link: '#',
     github: '#'
   },
   {
@@ -33,7 +31,6 @@ const projects = [
     image: '/project-3.jpg',
     tags: ['NLP', 'Transformers', 'Docker', 'Kubernetes'],
     icon: MessageSquare,
-    link: '#',
     github: '#'
   }
 ];
@@ -204,15 +201,8 @@ export default function Projects() {
                       {/* Links */}
                       <div className="flex gap-3">
                         <a 
-                          href={project.link}
-                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-[#0070a0] text-white text-sm font-medium hover:bg-[#004968] transition-colors"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Demo
-                        </a>
-                        <a 
                           href={project.github}
-                          className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-[#c2cdd8] text-[#33383f] text-sm font-medium hover:border-[#0070a0] hover:text-[#0070a0] transition-colors"
+                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-[#c2cdd8] text-[#33383f] text-sm font-medium hover:border-[#0070a0] hover:text-[#0070a0] transition-colors"
                         >
                           <Github className="w-4 h-4" />
                           Code
