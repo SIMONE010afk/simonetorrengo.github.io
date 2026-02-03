@@ -12,25 +12,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* ---------- SKILLS & CATEGORIES ---------- */
 const skills = [
-  { name: 'Python', icon: Code2, level: 95, category: 'Linguaggi' },
-  { name: 'JavaScript', icon: Code2, level: 90, category: 'Linguaggi' },
-  { name: 'SQL', icon: Database, level: 85, category: 'Linguaggi' },
+  { name: 'Python', icon: Code2, level: 100, category: 'Linguaggi' },
+  { name: 'JavaScript', icon: Code2, level: 60, category: 'Linguaggi' },
+  { name: 'SQL', icon: Database, level: 90, category: 'Linguaggi' },
   { name: 'C', icon: Code2, level: 70, category: 'Linguaggi' },
-  { name: 'Rust', icon: Cog, level: 65, category: 'Linguaggi' },
+  { name: 'Rust', icon: Cog, level: 40, category: 'Linguaggi' },
   { name: 'TensorFlow', icon: Brain, level: 90, category: 'ML/AI' },
-  { name: 'PyTorch', icon: Cpu, level: 88, category: 'ML/AI' },
-  { name: 'NLP', icon: MessageSquare, level: 92, category: 'AI' },
-  { name: 'Computer Vision', icon: Eye, level: 85, category: 'AI' },
-  { name: 'Power BI', icon: BarChart3, level: 80, category: 'Analytics' },
-  { name: 'Apache Airflow', icon: Workflow, level: 78, category: 'Orchestration' },
-  { name: 'API Integration', icon: Layers, level: 90, category: 'Dev' },
-  { name: 'Cloud Deployment', icon: Cloud, level: 87, category: 'DevOps' },
-  { name: 'PostgreSQL', icon: Database, level: 82, category: 'Database' },
-  { name: 'Git', icon: GitBranch, level: 88, category: 'Tools' },
-  { name: 'Docker', icon: Terminal, level: 85, category: 'DevOps' },
-  { name: 'Scikit-learn', icon: Brain, level: 85, category: 'ML/AI' },
-  { name: 'RAG', icon: Eye, level: 86, category: 'AI' },
-  { name: 'BigQuery', icon: Database, level: 79, category: 'Database' }
+  { name: 'PyTorch', icon: Cpu, level: 90, category: 'ML/AI' },
+  { name: 'NLP', icon: MessageSquare, level: 90, category: 'AI' },
+  { name: 'Computer Vision', icon: Eye, level: 80, category: 'AI' },
+  { name: 'Power BI', icon: BarChart3, level: 90, category: 'Analytics' },
+  { name: 'Apache Airflow', icon: Workflow, level: 90, category: 'Orchestration' },
+  { name: 'API Integration', icon: Layers, level: 70, category: 'Dev' },
+  { name: 'Cloud Deployment', icon: Cloud, level: 80, category: 'DevOps' },
+  { name: 'PostgreSQL', icon: Database, level: 70, category: 'Database' },
+  { name: 'Git', icon: GitBranch, level: 100, category: 'Tools' },
+  { name: 'Docker', icon: Terminal, level: 90, category: 'DevOps' },
+  { name: 'Scikit-learn', icon: Brain, level: 90, category: 'ML/AI' },
+  { name: 'RAG', icon: Eye, level: 80, category: 'AI' },
+  { name: 'BigQuery', icon: Database, level: 90, category: 'Database' }
 ];
 
 const categories = ['Tutti', ...new Set(skills.map((s) => s.category))];
@@ -160,7 +160,7 @@ export default function Skills() {
               Competenze <span className="gradient-text">Tecniche</span>
             </h2>
             <p className="text-lg text-[#33383f] max-w-2xl mx-auto">
-              Un insieme di competenze tecniche sviluppate durante il mio percorso.
+              Un insieme di competenze tecniche sviluppate durante il mio percorso di istruzione e lavorativo.
             </p>
           </div>
 
