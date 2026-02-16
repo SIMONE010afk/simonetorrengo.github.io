@@ -24,7 +24,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Navigation from './sections/Navigation';
 import Hero from './sections/Hero';
-import Clients from './sections/Clients';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
@@ -53,7 +52,6 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        <Clients />
         <Projects />
         <Skills />
         <Contact />

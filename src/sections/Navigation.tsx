@@ -92,7 +92,7 @@ export default function Navigation() {
                     : 'bg-[#0070a0] text-white hover:bg-[#004968]'
                 }`}
               >
-                Inizia un progetto
+                Contattami
               </a>
             </div>
 
@@ -149,7 +149,7 @@ export default function Navigation() {
               onClick={(e) => handleLinkClick(e, '#contact')}
               className="block w-full text-center px-5 py-3 rounded-xl bg-[#0070a0] text-white font-medium hover:bg-[#004968] transition-colors"
             >
-              Inizia un progetto
+              Contattami
             </a>
           </div>
         </div>

@@ -116,12 +116,6 @@ export default function Hero() {
                   Scopri i miei progetti
                   <ArrowDown className="w-5 h-5" />
                 </button>
-                <a
-                  href="#contact"
-                  className="px-6 py-3 rounded-lg font-medium text-[#0070a0] border-2 border-[#0070a0] hover:bg-[#0070a0] hover:text-white transition-all duration-300"
-                >
-                  Contattami
-                </a>
               </div>
             </div>
 

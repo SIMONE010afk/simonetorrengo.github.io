@@ -44,7 +44,6 @@ export default function Skills() {
   const gridRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [activeCategory, setActiveCategory] = useState('Tutti');
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   const filteredSkills =
     activeCategory === 'Tutti'
@@ -200,26 +199,14 @@ export default function Skills() {
           <div ref={gridRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {filteredSkills.map((s) => {
               const Icon = s.icon;
-              const hov = hoveredSkill === s.name;
               return (
-                <div
-                  key={s.name}
-                  className="skill-card group relative"
-                  onMouseEnter={() => setHoveredSkill(s.name)}
-                  onMouseLeave={() => setHoveredSkill(null)}
-                >
+                <div key={s.name} className="skill-card group relative">
                   <div
-                    className={`relative bg-white rounded-xl p-6 border-2 transition-all duration-300 cursor-pointer h-full flex flex-col ${
-                      hov ? 'border-[#0070a0] shadow-xl shadow-[#0070a0]/20 scale-105' : 'border-[#dee5eb] hover:border-[#2c90c9]'
-                    }`}
+                    className="relative bg-white rounded-xl p-6 border-2 border-[#dee5eb] h-full flex flex-col"
                   >
                     {/* Icona + pill arrotondata */}
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 ${
-                        hov ? 'bg-gradient-to-br from-[#0070a0] to-[#2c90c9]' : 'bg-[#e6f7ff]'
-                      }`}
-                    >
-                      <Icon className={`w-6 h-6 ${hov ? 'text-white' : 'text-[#0070a0]'}`} />
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-[#e6f7ff]">
+                      <Icon className="w-6 h-6 text-[#0070a0]" />
                     </div>
 
                     <h3 className="font-semibold text-[#1f1f1f] mb-2">{s.name}</h3>
@@ -228,19 +215,12 @@ export default function Skills() {
                     <div className="relative h-2 bg-[#dee5eb] rounded-full overflow-hidden">
                       <div
                         className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#0070a0] to-[#2c90c9] rounded-full transition-all duration-700"
-                        style={{ width: hov ? `${s.level}%` : '0%', transitionDelay: '0.1s' }}
+                        style={{ width: `${s.level}%` }}
                       />
                     </div>
-                    <div
-                      className={`text-xs text-[#33383f] mt-1 transition-opacity duration-300 ${
-                        hov ? 'opacity-100' : 'opacity-0'
-                      }`}
-                    >
+                    <div className="text-xs text-[#33383f] mt-1">
                       {s.level}%
                     </div>
-
-                    {/* Glow */}
-                    {hov && <div className="absolute inset-0 rounded-xl bg-[#0070a0]/5 -z-10 animate-pulse" />}
                   </div>
                 </div>
               );

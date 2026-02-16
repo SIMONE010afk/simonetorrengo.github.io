@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Github, Bot, Brain, MessageSquare, Trophy } from 'lucide-react';
+import { Github, Bot, Brain , MessageSquare, Trophy } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +10,7 @@ const projects = [
     id: 1,
     title: 'Facebook Hateful Memes - Multimodal Hate Speech Detection',
     description: 'Sistema di rilevamento di hate speech multimodale basato su deep learning e visione artificiale.',
-    image: '/project-1.jpg',
+    image: '/Hateful_memes.jpg',
     tags: ['Notebook', 'Google Colab', 'NLP', 'TensorFlow'],
     icon: Bot,
     github: 'https://github.com/SIMONE010afk/Facebook-Hateful-Memes'
