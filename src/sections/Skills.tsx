@@ -66,7 +66,7 @@ export default function Skills() {
     window.addEventListener('resize', resize);
 
     const nodes: { x: number; y: number; vx: number; vy: number; size: number; phase: number }[] = [];
-    for (let i = 1000; i < 1500; i++)
+    for (let i = 800; i < 1200; i++)
       nodes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -143,7 +143,7 @@ export default function Skills() {
             duration: 0.5,
             stagger: 0.05,
             ease: 'back.out(1.7)',
-            scrollTrigger: { trigger: gridRef.current, start: 'top 80%' },
+            scrollTrigger: { trigger: gridRef.current, start: 'top 80%' }, 
           }
         );
     }, sectionRef);

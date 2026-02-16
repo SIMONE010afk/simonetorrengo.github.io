@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Github, Bot, Brain, MessageSquare } from 'lucide-react';
+import { Github, Bot, Brain, MessageSquare, Trophy } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,12 +17,12 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Sistema di Raccomandazione',
-    description: 'Motore di raccomandazione basato su machine learning che analizza il comportamento degli utenti per suggerire prodotti e contenuti personalizzati in tempo reale.',
-    image: '/project-2.jpg',
-    tags: ['TensorFlow', 'PyTorch', 'Redis', 'AWS'],
-    icon: Brain,
-    github: '#'
+    title: 'Olimpiadi 2016 - Predizione Podio Nuoto',
+    description: 'Predirre Semifinali, finali e il podio delle olimpiadi 2016  di nuoto.',
+    image: '/Nuotatore_piscina_codice.png',
+    tags: ['pandas', 'numpy', 'scikit-learn', 'xgboost', 'matplotlib', 'seaborn'],
+    icon: Trophy,
+    github: 'https://github.com/SIMONE010afk/Olimpic-Games'
   },
   {
     id: 3,
@@ -89,11 +89,11 @@ export default function Projects() {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
+    const centerX = rect.width / 2; 
     const centerY = rect.height / 2;
     
-    const rotateX = (y - centerY) / 20;
-    const rotateY = (centerX - x) / 20;
+    const rotateX = (y - centerY) / 150; 
+    const rotateY = (centerX - x) / 150;
 
     gsap.to(card, {
       rotateX: rotateX,
